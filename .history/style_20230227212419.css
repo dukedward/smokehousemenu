@@ -1,0 +1,44 @@
+/* * {
+	margin: 0;
+	padding: 0;
+} */
+
+.title {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.sections {
+	display: grid;
+	/* display: flex; */
+	/* justify-content: center; */
+	/* align-items: center; */
+}
+
+.sect {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.desc {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.desc p {
+    padding-right: 1rem;
+}
+
+dt {
+    font-size: medium;
+    font-weight: bold;
+}
+
+dd {
+    margin-bottom: 1rem;
+}

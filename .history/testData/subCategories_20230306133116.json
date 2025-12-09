@@ -1,0 +1,30 @@
+const subCategories = [
+    {
+        name: 'Choose Sauces',
+        description: [
+            {
+                text: '🌶️ - Spicy Items',
+            },
+        ],
+        category: {
+            _id: '640533ab345c72c36a197c35',
+            name: 'Jumbo Wings'
+        },
+    }, {
+        name: 'Regular Sides',
+        description: [
+            {
+                text: 'Small - $4'
+            },
+            {
+                text: 'Large - $6'
+            }
+        ],
+        category: {
+            _id: '87689736897163987',
+            name: 'Sides'
+        }
+    }
+];
+
+export default subCategories

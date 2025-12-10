@@ -1,38 +1,626 @@
-.App {
-  text-align: center;
+/* src/App.css */
+
+* {
+    box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+    margin: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        sans-serif;
+    background: #0f172a;
+    color: #f9fafb;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+a {
+    text-decoration: none;
+    color: inherit;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+/* Root layout */
+.app-root {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
-.App-link {
-  color: #61dafb;
+/* Header / Brand */
+
+/* Chef Hat Icon Button */
+.chef-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.45rem;
+    border-radius: 50%;
+    cursor: pointer;
+    color: #fde047;
+    /* golden-yellow */
+    /* background: rgba(253, 224, 71, 0.08); */
+    transition: transform 0.22s ease, box-shadow 0.22s ease, background 0.22s ease;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Glow + bounce animation on hover */
+.chef-icon:hover {
+    /* background: rgba(253, 224, 71, 0.15); */
+    transform: translateY(-3px) scale(1.07);
+    /* box-shadow: 0 0 12px rgba(253, 224, 71, 0.55),
+        0 0 24px rgba(253, 224, 71, 0.25); */
+}
+
+/* Subtle active (click) state */
+.chef-icon:active {
+    transform: scale(0.95);
+    box-shadow: 0 0 6px rgba(253, 224, 71, 0.4);
+}
+
+.home-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.35rem;
+    border-radius: 50%;
+    color: #4768fd;
+    transition: background 0.15s ease, transform 0.12s ease;
+}
+
+.app-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.75rem 1.5rem;
+    border-bottom: 1px solid rgba(148, 163, 184, 0.25);
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+/* Right side container */
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    /* this spaces Admin / My Account / Logout */
+}
+
+/* Pill buttons in header */
+.header-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.35rem 0.9rem;
+    border-radius: 999px;
+    border: 1px solid rgba(148, 163, 184, 0.5);
+    background: rgba(15, 23, 42, 0.95);
+    color: #e5e7eb;
+    font-size: 0.8rem;
+    text-decoration: none;
+    cursor: pointer;
+    transition:
+        background 0.18s ease,
+        border-color 0.18s ease,
+        box-shadow 0.18s ease,
+        transform 0.12s ease;
+}
+
+.header-btn:hover {
+    background: rgba(30, 64, 175, 0.5);
+    border-color: #facc15;
+    box-shadow: 0 0 10px rgba(250, 204, 21, 0.4);
+    transform: translateY(-1px);
+}
+
+/* Filled-style (default) */
+.header-btn:not(.header-btn-outline):not(.header-btn-ghost) {
+    background: linear-gradient(90deg, #f97316, #fde047);
+    color: #111827;
+    border-color: transparent;
+}
+
+/* Outline style for Admin Menu so it stands out differently */
+.header-btn-outline {
+    background: transparent;
+}
+
+/* Ghost style for Logout */
+.header-btn-ghost {
+    background: transparent;
+    border-color: rgba(148, 163, 184, 0.4);
+    color: #9ca3af;
+}
+
+.header-btn-ghost:hover {
+    background: rgba(15, 23, 42, 0.9);
+    border-color: #f97316;
+    color: #f97316;
+}
+
+.brand {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.1rem;
+}
+
+.brand-title {
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+.brand-tagline {
+    font-size: 0.75rem;
+    color: #9ca3af;
+}
+
+/* App content */
+.app-main {
+    flex: 1;
+    padding: 1.25rem;
+}
+
+/* Screen wrapper */
+.screen {
+    max-width: 1200px;
+    margin: 0 auto;
+    background: radial-gradient(circle at top, #1f2937 0, #020617 70%);
+    border-radius: 1.2rem;
+    padding: 1.25rem 1.25rem 1.8rem;
+    box-shadow: 0 18px 40px rgba(15, 23, 42, 0.8);
+}
+
+/* Home */
+.home-screen .screen-title {
+    margin-bottom: 0.3rem;
+}
+
+.screen-title {
+    font-size: 1.4rem;
+    margin: 0 0 0.25rem 0;
+}
+
+.screen-subtitle {
+    margin: 0 0 1rem 0;
+    font-size: 0.9rem;
+    color: #cbd5f5;
+}
+
+/* Home cards */
+.home-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+.nav-card {
+    border-radius: 1rem;
+    border: 1px solid rgba(148, 163, 184, 0.4);
+    padding: 1.2rem 1rem;
+    background: rgba(15, 23, 42, 0.95);
+    box-shadow: 0 10px 30px rgba(15, 23, 42, 0.7);
+    transition: transform 0.1s ease, box-shadow 0.1s ease,
+        border-color 0.1s ease;
+}
+
+.nav-card h2 {
+    margin: 0 0 0.25rem 0;
+    font-size: 1.2rem;
+}
+
+.nav-card p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #9ca3af;
+}
+
+.nav-card:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 16px 40px rgba(15, 23, 42, 0.9);
+    border-color: rgba(248, 181, 36, 0.8);
+}
+
+/* Section header for menu pages */
+.section-header h1 {
+    font-size: 1.3rem;
+    margin: 0;
+}
+
+.section-header p {
+    margin: 0.25rem 0 0.75rem 0;
+    font-size: 0.85rem;
+    color: #e5e7eb;
+}
+
+/* ===========================
+   MENU NAV (STACKED MOBILE)
+   =========================== */
+
+.menu-nav {
+    display: flex;
+    flex-direction: column;
+    /* STACKED on mobile */
+    gap: 0.5rem;
+    margin-bottom: 0.8rem;
+}
+
+.nav-tab {
+    border-radius: 999px;
+    padding: 0.6rem 1rem;
+    font-size: 0.85rem;
+    border: 1px solid rgba(148, 163, 184, 0.6);
+    background: rgba(15, 23, 42, 0.9);
+    cursor: pointer;
+    white-space: nowrap;
+    transition: background 0.1s ease, border-color 0.1s ease,
+        transform 0.08s ease, box-shadow 0.08s ease;
+    width: 100%;
+    /* full-width button on mobile */
+    text-align: center;
+    /* center text since it's a button-style */
+}
+
+.nav-tab-active {
+    background: linear-gradient(90deg, #f97316, #fde047);
+    color: #111827;
+    border-color: transparent;
+    box-shadow: 0 8px 22px rgba(248, 181, 36, 0.55);
+    transform: translateY(-1px);
+}
+
+/* Content under nav bar */
+.menu-content {
+    margin-top: 0.4rem;
+    padding-top: 0.9rem;
+    border-top: 1px solid rgba(148, 163, 184, 0.35);
+}
+
+.menu-content h2 {
+    margin-top: 0;
+}
+
+.menu-content p {
+    font-size: 0.9rem;
+    color: #e5e7eb;
+}
+
+/* ===========================
+   DESKTOP / LARGE SCREEN
+   BUTTONS IN NAV BAR ROW
+   =========================== */
+
+@media (min-width: 1024px) {
+    .app-main {
+        padding: 2rem;
+    }
+
+    .screen {
+        padding: 1.8rem 2.2rem 2.4rem;
+    }
+
+    .home-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .menu-nav {
+        flex-direction: row;
+        /* HORIZONTAL nav bar */
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: flex-start;
+    }
+
+    .nav-tab {
+        width: auto;
+        /* shrink-wrap around text */
+        text-align: left;
+    }
+
+    .menu-content {
+        padding-top: 1.1rem;
+    }
+}
+
+/* Steam wobble animation */
+@keyframes steam-loop {
+    0% {
+        transform: translateY(0) scale(1) rotate(0deg);
+    }
+
+    25% {
+        transform: translateY(-2px) scale(1.02) rotate(-1deg);
+    }
+
+    50% {
+        transform: translateY(-1px) scale(1.01) rotate(1deg);
+    }
+
+    75% {
+        transform: translateY(-2px) scale(1.02) rotate(-1deg);
+    }
+
+    100% {
+        transform: translateY(0) scale(1) rotate(0deg);
+    }
+}
+
+/* Apply steam animation */
+.chef-icon svg {
+    animation: steam-loop 3.2s ease-in-out infinite;
+}
+
+/* Pause the steam animation on hover (so bounce animation looks smooth) */
+.chef-icon:hover svg {
+    animation-play-state: paused;
+}
+
+/* Auth screen */
+.auth-screen h1 {
+    margin-top: 0;
+    margin-bottom: 0.3rem;
+}
+
+.auth-toggle {
+    display: inline-flex;
+    border-radius: 999px;
+    padding: 0.2rem;
+    background: rgba(15, 23, 42, 0.9);
+    border: 1px solid rgba(148, 163, 184, 0.4);
+    margin-bottom: 1rem;
+}
+
+.auth-toggle-btn {
+    border: none;
+    background: transparent;
+    padding: 0.4rem 0.9rem;
+    border-radius: 999px;
+    font-size: 0.85rem;
+    color: #e5e7eb;
+    cursor: pointer;
+}
+
+.auth-toggle-active {
+    background: linear-gradient(90deg, #f97316, #fde047);
+    color: #111827;
+}
+
+/* Form base */
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+}
+
+.form label {
+    font-size: 0.85rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+}
+
+.form input,
+.form textarea,
+.form select {
+    border-radius: 0.6rem;
+    border: 1px solid rgba(148, 163, 184, 0.6);
+    background: rgba(15, 23, 42, 0.9);
+    color: #f9fafb;
+    padding: 0.5rem 0.7rem;
+    font-size: 0.9rem;
+}
+
+.form-error {
+    color: #fecaca;
+    font-size: 0.8rem;
+}
+
+/* Buttons */
+.primary-btn,
+.secondary-btn {
+    border-radius: 999px;
+    padding: 0.5rem 1rem;
+    border: none;
+    font-size: 0.9rem;
+    cursor: pointer;
+}
+
+.primary-btn {
+    background: linear-gradient(90deg, #f97316, #fde047);
+    color: #111827;
+    box-shadow: 0 8px 22px rgba(248, 181, 36, 0.55);
+}
+
+.secondary-btn {
+    background: rgba(15, 23, 42, 0.9);
+    color: #e5e7eb;
+    border: 1px solid rgba(148, 163, 184, 0.6);
+}
+
+/* Google button */
+.google-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.google-icon {
+    width: 1.3rem;
+    height: 1.3rem;
+    border-radius: 50%;
+    background: #facc15;
+    color: #111827;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+}
+
+/* Divider */
+.auth-divider {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin: 0.75rem 0;
+    font-size: 0.8rem;
+    color: #9ca3af;
+}
+
+.auth-divider::before,
+.auth-divider::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: rgba(148, 163, 184, 0.5);
+}
+
+.admin-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+.admin-panel {
+    background: rgba(15, 23, 42, 0.9);
+    border-radius: 1rem;
+    border: 1px solid rgba(148, 163, 184, 0.4);
+    padding: 1rem;
+}
+
+.admin-list {
+    list-style: none;
+    margin: 0.5rem 0 0;
+    padding: 0;
+}
+
+.admin-list-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.4rem 0;
+    border-bottom: 1px dashed rgba(148, 163, 184, 0.4);
+}
+
+.admin-list-item:last-child {
+    border-bottom: none;
+}
+
+.admin-item-actions {
+    display: flex;
+    gap: 0.5rem;
+    font-size: 0.8rem;
+}
+
+.admin-item-actions button {
+    background: none;
+    border: none;
+    color: #e5e7eb;
+    cursor: pointer;
+    padding: 0;
+}
+
+.admin-item-actions button:hover {
+    text-decoration: underline;
+}
+
+.danger-text {
+    color: #fecaca;
+}
+
+.tag {
+    border-radius: 999px;
+    padding: 0.2rem 0.6rem;
+    border: 1px solid rgba(148, 163, 184, 0.6);
+    background: rgba(15, 23, 42, 0.9);
+    color: #e5e7eb;
+    font-size: 0.8rem;
+    cursor: pointer;
+}
+
+.tag-active {
+    border-color: #facc15;
+    box-shadow: 0 0 10px rgba(250, 204, 21, 0.4);
+}
+
+.tag-pill {
+    margin-left: 0.5rem;
+    padding: 0.08rem 0.4rem;
+    border-radius: 999px;
+    background: rgba(148, 163, 184, 0.25);
+    font-size: 0.7rem;
+}
+
+.muted-pill {
+    font-size: 0.7rem;
+    padding: 0.1rem 0.4rem;
+    border-radius: 999px;
+    background: rgba(148, 163, 184, 0.25);
+}
+
+.checkbox-row {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.form-row-actions {
+    display: flex;
+    gap: 0.5rem;
+}
+
+/* Wider layout on desktop */
+@media (min-width: 1024px) {
+    .admin-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+/* ---------- Mobile Header Layout ---------- */
+@media (max-width: 768px) {
+    .app-header {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.75rem;
+        padding: 0.75rem 1rem;
+    }
+
+    .header-left {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 0.25rem;
+    }
+
+    .brand {
+        align-items: center;
+    }
+
+    .brand-title {
+        font-size: 0.95rem;
+    }
+
+    .brand-tagline {
+        font-size: 0.7rem;
+        opacity: 0.85;
+    }
+
+    .header-right {
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+    }
+
+    .header-btn {
+        font-size: 0.75rem;
+        padding: 0.3rem 0.75rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .header-right {
+        row-gap: 0.4rem;
+    }
 }

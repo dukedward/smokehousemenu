@@ -1,0 +1,423 @@
+[{
+  "_id": {
+    "$oid": "6409484e79f233ac102e5076"
+  },
+  "name": "Choose Amount",
+  "description": [],
+  "category": {
+    "$oid": "640945e979f233ac102e506f"
+  },
+  "createdAt": {
+    "$date": "2023-03-09T02:45:21.000Z"
+  },
+  "updatedAt": {
+    "$date": "2023-03-09T02:45:21.000Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6409484e79f233ac102e5077"
+  },
+  "name": "Choose Style",
+  "description": [],
+  "category": {
+    "$oid": "640945e979f233ac102e506f"
+  },
+  "createdAt": {
+    "$date": "2023-03-09T02:45:21.000Z"
+  },
+  "updatedAt": {
+    "$date": "2023-03-09T02:45:21.000Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6409484e79f233ac102e507e"
+  },
+  "name": "Burgers",
+  "description": [],
+  "category": {
+    "$oid": "640945e979f233ac102e5070"
+  },
+  "createdAt": {
+    "$date": "2023-03-09T02:45:21.000Z"
+  },
+  "updatedAt": {
+    "$date": "2023-03-09T02:45:21.000Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6409484e79f233ac102e5078"
+  },
+  "name": "Choose Sauces",
+  "description": [
+    {
+      "text": "🌶️ - Spicy Items"
+    }
+  ],
+  "category": {
+    "$oid": "640945e979f233ac102e506f"
+  },
+  "createdAt": {
+    "$date": "2023-03-09T02:45:21.000Z"
+  },
+  "updatedAt": {
+    "$date": "2023-03-09T02:45:21.000Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6409484e79f233ac102e507c"
+  },
+  "name": "Specialty Sides",
+  "description": [
+    {
+      "text": "Cup - $7"
+    },
+    {
+      "text": "Pint - $12"
+    },
+    {
+      "text": "Quart - $21"
+    }
+  ],
+  "category": {
+    "$oid": "640945e979f233ac102e5073"
+  },
+  "createdAt": {
+    "$date": "2023-03-09T02:45:21.000Z"
+  },
+  "updatedAt": {
+    "$date": "2023-03-09T02:45:21.000Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6409484e79f233ac102e5079"
+  },
+  "name": "Smoked Pork Ribs",
+  "description": [],
+  "category": {
+    "$oid": "640945e979f233ac102e5071"
+  },
+  "createdAt": {
+    "$date": "2023-03-09T02:45:21.000Z"
+  },
+  "updatedAt": {
+    "$date": "2023-03-09T02:45:21.000Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "640f5221c037b1ad914fe60c"
+  },
+  "name": "Smoky Dog (Pork or Beef)",
+  "description": [
+    {
+      "text": "w/ bun or sliced"
+    }
+  ],
+  "category": {
+    "$oid": "640f4d897ff120faa849e5bd"
+  },
+  "createdAt": {
+    "$date": "2023-03-13T16:41:05.140Z"
+  },
+  "updatedAt": {
+    "$date": "2023-03-13T16:41:05.140Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "640f5221c037b1ad914fe60d"
+  },
+  "name": "Smash Burgers",
+  "description": [
+    {
+      "text": "Individually wrapped double cheese  burgers"
+    }
+  ],
+  "category": {
+    "$oid": "672b6f56b863b5f638f36e9e"
+  },
+  "createdAt": {
+    "$date": "2023-03-13T16:41:05.140Z"
+  },
+  "updatedAt": {
+    "$date": "2023-03-13T16:41:05.140Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "640f5221c037b1ad914fe609"
+  },
+  "name": "BBQ Chicken: Legs & Thighs",
+  "description": [],
+  "category": {
+    "$oid": "640f4d897ff120faa849e5bd"
+  },
+  "createdAt": {
+    "$date": "2023-03-13T16:41:05.140Z"
+  },
+  "updatedAt": {
+    "$date": "2023-03-13T16:41:05.140Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "640f5221c037b1ad914fe610"
+  },
+  "name": "Regular Sides",
+  "description": [
+    {
+      "text": "Serves 10-15 people - $22",
+      "_id": {
+        "$oid": "640f5221c037b1ad914fe611"
+      }
+    }
+  ],
+  "category": {
+    "$oid": "640945e979f233ac102e5073"
+  },
+  "createdAt": {
+    "$date": "2023-03-13T16:41:05.141Z"
+  },
+  "updatedAt": {
+    "$date": "2023-03-13T16:41:05.141Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "640f5221c037b1ad914fe613"
+  },
+  "name": "Sides",
+  "description": [
+    {
+      "text": "Serves 10-15 people - $50",
+      "_id": {
+        "$oid": "640f5221c037b1ad914fe614"
+      }
+    }
+  ],
+  "category": {
+    "$oid": "640f4d897ff120faa849e5be"
+  },
+  "createdAt": {
+    "$date": "2023-03-13T16:41:05.141Z"
+  },
+  "updatedAt": {
+    "$date": "2023-03-13T16:41:05.141Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "640f5221c037b1ad914fe606"
+  },
+  "name": "Chicken Wings",
+  "category": {
+    "$oid": "640f4d897ff120faa849e5bd"
+  },
+  "createdAt": {
+    "$date": "2023-03-13T16:41:05.139Z"
+  },
+  "updatedAt": {
+    "$date": "2023-03-13T16:41:05.139Z"
+  },
+  "description": [
+    {
+      "text": "Fried or Grilled"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "640f5221c037b1ad914fe60a"
+  },
+  "name": "Pork Ribs",
+  "description": [],
+  "category": {
+    "$oid": "640f4d897ff120faa849e5bd"
+  },
+  "createdAt": {
+    "$date": "2023-03-13T16:41:05.140Z"
+  },
+  "updatedAt": {
+    "$date": "2023-03-13T16:41:05.140Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "641f6a2bd9ca57a5ca0595fd"
+  },
+  "name": "Cheesy Garlic Toast",
+  "description": [],
+  "category": {
+    "$oid": "67578cce4c44619f292eb24e"
+  },
+  "createdAt": {
+    "$date": "2023-03-25T21:39:55.000Z"
+  },
+  "updatedAt": {
+    "$date": "2023-03-25T21:39:55.000Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "665dd90bcdd47868117abcf7"
+  },
+  "name": "Fresh Squeezed Lemonade",
+  "category": {
+    "$oid": "6658fc5fcdd47868117abce0"
+  },
+  "description": [
+    {
+      "text": "Flavors: Strawberry or Classic"
+    }
+  ],
+  "createdAt": {
+    "$date": "2024-06-03T14:54:03.000Z"
+  },
+  "updatedAt": {
+    "$date": "2024-06-03T14:54:03.000Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "665ddb86cdd47868117abcf8"
+  },
+  "name": "Coke/Sprite",
+  "description": [
+    {
+      "text": "20oz Bottles"
+    }
+  ],
+  "category": {
+    "$oid": "6658fc5fcdd47868117abce0"
+  },
+  "createdAt": {
+    "$date": "2024-06-03T19:04:38.000Z"
+  },
+  "updatedAt": {
+    "$date": "2024-06-03T19:04:38.000Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "666089dbd2effa6ced040153"
+  },
+  "name": "Fresh Squeezed Lemonade",
+  "category": {
+    "$oid": "665f4896cdd47868117abd0c"
+  },
+  "description": [
+    {
+      "text": "Flavors: Strawberry or Classic"
+    }
+  ],
+  "createdAt": {
+    "$date": "2024-06-05T16:53:03.000Z"
+  },
+  "updatedAt": {
+    "$date": "2024-06-05T16:53:03.000Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6660e6f4d2effa6ced04015e"
+  },
+  "name": "Hand-crafted BBQ Meatballs",
+  "description": [],
+  "category": {
+    "$oid": "640f4d897ff120faa849e5bd"
+  },
+  "createdAt": {
+    "$date": "2024-06-05T22:32:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2024-06-05T22:32:00.000Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6662170dd2effa6ced04016d"
+  },
+  "name": "Sodas",
+  "category": {
+    "$oid": "665f4896cdd47868117abd0c"
+  },
+  "createdAt": {
+    "$date": "2024-06-06T20:08:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2024-06-06T20:08:00.000Z"
+  },
+  "description": []
+},
+{
+  "_id": {
+    "$oid": "66627d69d2effa6ced040174"
+  },
+  "name": "Sliders (Beef)",
+  "description": [],
+  "category": {
+    "$oid": "640f4d897ff120faa849e5bd"
+  },
+  "createdAt": {
+    "$date": "2024-06-06T15:23:30.000Z"
+  },
+  "updatedAt": {
+    "$date": "2024-06-06T15:23:30.000Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66684c80d2effa6ced040179"
+  },
+  "name": "Game Day Platter",
+  "description": [
+    {
+      "text": "$65"
+    }
+  ],
+  "category": {
+    "$oid": "640f4d897ff120faa849e5bb"
+  },
+  "createdAt": {
+    "$date": "2024-06-11T13:09:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2024-06-11T13:09:00.000Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6699b27c22be59a460876fc1"
+  },
+  "name": "Sandwiches",
+  "description": [],
+  "category": {
+    "$oid": "640945e979f233ac102e5070"
+  },
+  "createdAt": {
+    "$date": "2023-07-19T00:48:21.000Z"
+  },
+  "updatedAt": {
+    "$date": "2023-07-19T00:48:21.000Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6712a160adc6ba291854ff57"
+  },
+  "name": "Turkey Wings",
+  "category": {
+    "$oid": "640f4d897ff120faa849e5bd"
+  },
+  "createdAt": {
+    "$date": "2024-10-18T17:58:05.140Z"
+  },
+  "updatedAt": {
+    "$date": "2024-10-18T17:58:05.140Z"
+  }
+}]

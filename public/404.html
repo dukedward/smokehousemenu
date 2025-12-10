@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Redirecting…</title>
+    <meta http-equiv="refresh" content="0; url=/" />
+    <script>
+        // For SPA routing on GitHub Pages
+        (function () {
+            var redirectTo = "/";
+            var l = window.location;
+            // Preserve path and query if you want React to see them
+            var newUrl =
+                l.protocol + "//" + l.host + "/?" + "redirect=" + encodeURIComponent(l.pathname + l.search + l.hash);
+            window.location.replace(newUrl);
+        })();
+    </script>
+</head>
+
+<body>
+    Redirecting…
+</body>
+
+</html>

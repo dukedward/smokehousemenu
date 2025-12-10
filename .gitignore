@@ -10,6 +10,7 @@
 
 # production
 /build
+/FireStore Import
 
 # misc
 .DS_Store

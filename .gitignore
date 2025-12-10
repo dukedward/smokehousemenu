@@ -10,8 +10,6 @@
 
 # production
 /build
-/FireStore Import
-/src/firebaseConfig.js
 
 # misc
 .DS_Store
